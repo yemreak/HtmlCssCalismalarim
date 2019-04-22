@@ -1,0 +1,99 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 29, 2018, 6:33:59 PM
+    Author     : YEmre
+*/
+
+.row {
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap; /* içindeki küçültüp kendisine göre ayarlar, (yanyana 2 sütun olması sağlar) */
+    align-items: center;
+    margin-top: 5%;
+}
+
+.col-3 {
+    width: 33%;
+    padding-bottom: 11px;
+}
+
+.user-info-screen {
+    width: 40%;
+    overflow: hidden;
+    background-color: aliceblue;
+    border-radius: 5px;
+    margin: auto;
+    box-shadow: 2px 2px azure;
+    display: block;
+    padding: 17px;
+    
+}
+
+.small-input-text {
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 11px;
+    box-shadow: 5px 5px grey;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+.small-input-text:hover {
+    box-shadow: 7px 7px grey;
+}
+
+.user-info-screen-img {
+    display: block; /* Block yapmazsak merkeze alamayız */
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    box-shadow: 3px 3px azure;
+}
+
+.user-info-screen-img:hover {
+    opacity: 0.5;
+}
+
+.input-text-head {
+    display: inline-block;
+    float: left;
+    margin-top: 5%;
+    margin-left: 4%;
+    font-family: cursive;
+    color: darkorange;
+}
+
+.user-info-text {
+    display: block;
+
+    margin-left: 5%;
+    padding: 30px;
+    font-family: monospace;
+    color: darkblue;
+}
+
+.fancy-button {
+    padding: 7px;
+    box-shadow: 2px 2px grey;
+    border-radius: 3px;
+    background: transparent;
+}
+
+.fancy-button:hover {
+    box-shadow: 4px 4px grey;
+}
+
+.fancy-button:active {
+    padding: 9px;
+}
+
+
+
+

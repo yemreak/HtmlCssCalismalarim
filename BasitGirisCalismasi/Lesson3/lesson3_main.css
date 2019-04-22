@@ -1,0 +1,89 @@
+html {
+    /* Eğer şerif fontu olmazsa, sans-şerif olur. */
+    font-family: "Times New Roman", serif, sans-serif;
+    font-size: 16px; /* Default browser px  em= kat misli, 2em= 32px*/
+    font-style: oblique;
+}
+
+body {
+    text-align: center;
+    background-image: url(univer-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    /* İlk renkten öbür renge doğru belirtilen yönde ton değiştirerek gider. */ 
+    background: linear-gradient(to left, #053a49, #2f4444);
+    box-shadow: 4px 5px 3px #08335a;
+    
+}
+
+/* ID > Class > Genel (sıralama aşağıda)
+* color: green !important; (hepsini ezer)
+* #foo id
+* [id="foo"] Foo olan her id. = .class
+* h1
+*/
+
+/* Div içindeki h1 ve h3 için geçerli kodlar */
+div h1, h3 {
+    color: #ffffff;
+    /* x, y, blur, renk */
+    text-shadow: 2px 2px 5px black;
+    /* Satır arası boşluk, küçük olursa yazılar birbirine girer. */
+    line-height: inherit; /* rem değeri alır. (1rem) */
+    font-family: sans-serif;
+}
+
+h1 {
+    font-style: italic;
+    color: #9a1025;
+    
+}
+
+h2 {
+  color: rgb(81, 140, 154);  
+}
+
+.borderImg {
+    border: 10px solid #5e21f8;
+    border-radius: 50px 20px;
+}
+
+/* Unordered list altındaki her list elemanı için */
+ul li {
+    color: aliceblue;
+    font-size: 20px;
+    
+}
+
+/* Sadece bir seviye altta olan list'ler için geçerlidir. */
+ul > li {
+    color : aqua;
+    font-size: 25px;
+}
+
+.formatting {
+    font-size: 2.5em;
+    line-height: 2em;
+    color: whitesmoke;
+}
+
+a {
+    text-decoration: none; /* İtelik, normal */
+    font-size: 1.4em;
+    color: pink;
+    letter-spacing: 1px;
+    word-spacing: 20px; /* Boşluk ayarları */
+    text-transform: uppercase; /* Hepsini büyük harf yapma */
+}
+
+h1.specialFont {
+    font-family: "Mina";
+}
+
+h1.specialFont2 {
+    color: yellow;
+    font-family: "Roboto+Slab";
+}

@@ -1,0 +1,121 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 11, 2018, 6:02:57 PM
+    Author     : yemreak
+*/
+
+/* Standard syntax */
+@keyframes navBar-clicked {
+    from {background-color: darkslategray; color: aliceblue;}
+    to {background-color: darkslateblue; color: aliceblue;}
+}
+
+html { 
+   background: url(../images/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+}
+
+.navBar {
+    margin: auto;
+    margin-top: 27px;
+    max-width: 45%; /* Sayfa boyutuna göre ayarlanma */
+    /* max-height: 70px; yaparsak bu yükseklikten fazlası altta kalır. */
+    text-align: center;
+    display: block; /* Satır halinde gösterme */
+    opacity: 0.9;
+}
+
+.navBar ul {
+    overflow: hidden; /* Üst üste binmeyi engeller */
+    background-color: aliceblue; /* Renk Ayarı */
+    margin: 0;
+    padding: 0;
+    border-radius: 30%;
+}
+
+.navBar img {
+    color: aliceblue;
+    margin-top: 9px;
+    margin-right: 3.3%;
+    display: inline;
+}
+
+.navBar li {
+    list-style: none; /* Liste no'larını kaldırma' */
+    float: left; /* Sola yaslama */
+    position: relative;
+}
+
+.navBar li a {
+    float: left;
+    padding: 25px;
+    text-align: center;
+    text-decoration: none;
+    color: darkslategrey;
+    font-size: 17px;
+    
+}
+
+.navBar li a:hover {
+    animation-name: navBar-clicked;
+    animation-duration: 1s;
+    background-color: darkslateblue; 
+    color: aliceblue;
+}
+
+.navBar hr {
+    margin: 33px;
+    background-color: darkslategray;
+}
+
+.navBar li.right {
+    float: right;
+}
+
+
+@media screen and (max-width: 1280px) {
+    
+    .navBar ul li {
+        display: none;
+    }
+    
+    .navBar img {
+        margin-top: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .navBar img:active {
+        background-color: darkslategray;
+    }
+    
+    div.navBar.menu {
+        position: relative;
+    }
+     
+    div.navBar.menu li {
+        float: none;
+        margin-top: 7px;
+        padding: 17px;
+        display: block;
+        text-align: center;
+    }
+    
+    div.navBar.menu li a {
+        float: none;
+    }
+    
+}
+
+
+

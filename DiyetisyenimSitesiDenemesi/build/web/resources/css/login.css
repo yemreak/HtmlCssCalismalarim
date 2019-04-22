@@ -1,0 +1,88 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 28, 2018, 5:01:42 PM
+    Author     : YEmre
+*/
+
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+.log_screen { 
+    animation: zoom 1s;
+    opacity: 0.85;
+    margin: auto;
+    margin-bottom: 10%;
+    box-shadow: 2px 2px azure;
+    width: 30%;
+    display: block;
+    background-color: aliceblue;
+    text-align: center;
+    overflow: hidden;
+    padding: 7px;
+    border-radius: 5%;
+}
+
+.log_screen * {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.log_screen img {
+    max-width: 40%;
+    max-height: 40%;
+    margin-bottom: 0;
+}
+
+.userInput {
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 5px 5px grey;
+    font-size: 90%;
+    display: block;
+    padding: 3% 6% 3% 6%;
+    width: 60%;
+    border-radius: 7px 7px;
+}
+
+.userInput:hover {
+    background-color: #eeeeee;
+    
+}
+
+.loginText, .loginLink {
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.loginLink:hover {
+    font-size: 19px;
+    color: purple;
+}
+
+.loginButton {
+    opacity: 0.8;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    display: block;
+    font-size: 17px;
+    padding: 3% 16% 3% 16%;
+    border-radius: 15% 3%;
+    box-shadow: 2px 2px #fae6ff;
+    background: linear-gradient(to top left, #9900ff, #6699ff);
+    color: azure;
+}
+
+.loginButton:hover {
+    background: linear-gradient(to top left, #0699ff, #0900ff);
+}
+
+.loginButton:checked {
+    box-shadow: none;
+}

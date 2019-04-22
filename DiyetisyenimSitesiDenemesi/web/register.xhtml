@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+
+    <h:head>
+        <title>Kayıt Ol</title>
+
+        <!-- External Files -->
+        <link href="resources/css/login.css" rel="stylesheet" type="text/css"/>
+        <link href="resources/css/nav_bar.css" rel="stylesheet" type="text/css"/>
+        <script src="resources/js/nav_menu.js" type="text/javascript"></script>
+        <!-- End of External Files -->
+    </h:head>
+
+    <h:body>
+        <!-- Top Nav Bar-->
+        <div class="navBar" id="navMenu">
+            <ul>         
+                <h:outputLink onclick="openNavMenu()" value="javascript:void(0)"><img src="resources/images/vegan.png" alt=""/></h:outputLink>
+                <li> <h:outputLink value="index.xhtml"> Ana Sayfa </h:outputLink></li>
+                <li> <h:outputLink value="#explore"> Diyetisyenler </h:outputLink> </li>
+                <li class="right"> <h:outputLink value="about.xhtml"> Hakkımızda </h:outputLink></li>
+                <li class="right"> <h:outputLink value="help.xhtml"> Yardım </h:outputLink></li>
+            </ul>
+            <hr></hr>
+        </div>
+        <!-- End of Top Nav Bar-->
+
+        <!-- Register Screen -->
+        <div class="log_screen">                
+            <h:form>
+                <img style="padding-left: 30px;" src="resources/images/note.png" alt="Register"/>
+                <h:inputText class="userInput" id="email" value="#{user.email}" a:placeholder="E-posta"/>
+                <h:outputText style="#{user.err_email}" value="* Email zaten kullanımda veya hatalı girildi"/>
+                <h:inputText class="userInput" id="username" value="#{user.username}" a:placeholder="Kullanıcı Adı"/>
+                <h:outputText style="#{user.err_username}" value="* Kullanıcı adı zaten kullanımda veya hatalı girildi"/>
+                <h:inputSecret class="userInput" id="password" value="#{user.password}"  a:placeholder="Şifre"/>
+                <h:inputSecret class="userInput" id="repassword" value="#{user.repassword}"  a:placeholder="Şifreyi Tekrarlayın"/>
+                <h:outputText style="#{user.err_password}" value="* Şifre hatalı girildi"/>
+                <h:commandButton class="loginButton" value="Kayıt Ol" action="#{user.register()}"/>
+                <!-- <h:outputText value="#{user.msg}"/> -->
+                <h:outputText class="loginText" value="Zaten kayıtlı mısın?  "/>
+                <h:outputLink class="loginLink" value="index.xhtml">Giriş yap</h:outputLink>
+            </h:form>
+        </div>
+        <!-- End of Register Screen -->
+    </h:body>
+</html>
+

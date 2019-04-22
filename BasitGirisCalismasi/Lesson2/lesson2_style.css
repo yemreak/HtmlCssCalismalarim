@@ -1,0 +1,24 @@
+body  {
+    background-color: paleturquoise;
+}
+
+h1 {
+    color: mediumslateblue;
+    text-align: center;
+}
+
+/* Class tanımlaması */
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: aliceblue;
+    margin: auto;
+    
+}
+
+/* ID tanımalaması */
+#circle {
+    color: darkgoldenrod;
+    font-size: 40px;
+    text-align: center;
+}

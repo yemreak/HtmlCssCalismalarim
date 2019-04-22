@@ -1,0 +1,239 @@
+/* ############## Varsayılanlar ############## */
+
+nav, header, footer {
+    display: block; /* Satır olarak gözükür. */
+}
+
+body {
+    line-height: 1;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+.row {
+    width: 100%; /* Sayfa boyutu ile değişebilme */
+    display: flex; /* içindeki küçültüp kendisine göre ayarlar, (yanyana 2 sütun olması sağlar) */
+    flex-wrap: wrap;
+    align-items: center;
+    
+}
+
+.row::after {
+    display: table;
+    clear: both; /* Float (yaslama) özellikleri kaldırır, miras alınan. */
+    content: "";
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+
+/* ############## Nav Bar ############## */
+
+nav {
+    width: 100%; /* Sayfaya göre boyutlanır. */
+    margin: 0;
+}
+
+nav ul {
+    background-color: aliceblue;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none; /* Satur başına nokta eklemez */
+}
+
+nav ul.topNav li {
+    list-style: none;
+    float: left; /* Sola yaslama */
+}
+
+ul.topNav li.topNav-right {
+    float: right;
+}
+
+ul.topNav li a {
+    display: block;
+    text-decoration: none;
+    min-height: 16px;
+    text-align: center;
+    padding: 14px;
+    text-transform: uppercase;
+    color: #103152;
+
+}
+
+ul.topNav li a:hover {
+    /* Yazı rengi ile arkaplan rengini değiştiriyorum. */
+    background-color: #103152;
+    color: aliceblue;
+}
+
+ul.topNav li.dropDownIcon {
+    display: none; /* Gözükmesini engelliyoruz */
+}
+
+/* ############## Özel Stiller ############## */
+
+#section-1-gradient {
+    background: #329fff;
+    background: -webkit-linear-gradient(#329fff, #b9ddfd); /* Safari */
+    background: -o-linear-gradient(#329fff, #b9ddfd); /* Opera */
+    background: -moz-linear-gradient(#329fff, #b9ddfd); /* Mozilla */
+    background: linear-gradient(#329fff, #b9ddfd);  /* Genel syntax */
+}
+
+div.rightSide-col {
+    margin-left: 5%;
+}
+
+div.leftSide-col {
+    margin-left: 30%;
+}
+
+h1.large, h2.large {
+    color: rgb(8, 1, 54);
+    font-size: 1.5em;
+    padding-left: 4%;
+    line-height: 40px;
+    margin: 0;
+}
+
+form h3 {
+    color: rgb(247, 254, 198);
+}
+
+
+
+input[type="text"], input[type="password"] {
+    font-size: 20px;
+    width: 400px;
+    min-width: 100px;
+    padding: 3px;
+    margin: 4px;
+    border-radius: 7px; /* Kenar yumuşatma */
+}
+
+
+/* ############## Telefon için ############## */
+
+/* Görüntüyü izleme */
+@media screen and (max-width: 688px) {
+    ul.topNav li:not(:nth-child(1)) { /* 1. hariç diğerlerine uygular. */
+        display: none;
+    }
+    
+    ul.topNav li.dropDownIcon { 
+        display: block; /* Konum ayarlamada kolaylık sağladığı için block yapıyoruz. Tüm satırı işler */
+        float: right; /* Yukarıda sola dayadığımız için yazmamız lazım. */
+    }
+    
+    ul.topNav.responsive li.dropDownIcon {
+        /* Konumunu sabit ve sağ üst köşe yapıyoruz. */
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+    ul.topNav.responsive {
+        /* Nav bar'ın bizimle beraber ilerlemediğine, yer değiştirmediğine  emin olmak için */
+        position: relative;
+    }
+    
+    ul.topNav.responsive li {
+        display: inline;
+        /* Sola yaslamayı engellemek için, yukarıdaki ayarda sola yaslandıydı. */
+        float: none; 
+    }
+    
+    ul.topNav.responsive li a {
+        display: block;
+        text-align: left;
+    }
+    
+    div.container {
+        text-align: center;
+    }
+    
+    /* Mobil için yeni sütun sığmıyor, bu sebeple aşağı inmeli, width'ini 50'den 100'e alıyoruz. */
+    .col-6 {
+        width: 100%;
+    }
+    
+    /* Mobil'de margine ihtiyacımız yok, kötü gözüküyor. */
+    div.leftSide-col,
+    div.rightSide-col {
+        margin: 0;
+    }
+    
+    div.leftSide-col {
+        text-align: left;
+        margin-left: 15px;
+    }
+    
+    input[type="text"],
+    input[type="password"] {
+        width: 379px;
+    }
+    
+    .videoContainer iframe {
+        position: relative; /* Normal konumu korumasını istiyoruz. */
+        width: 90%;
+        padding-top: 30px;
+        margin: 0;
+        overflow: hidden;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
